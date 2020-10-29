@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            DateTime start;
+            DateTime end;
+
+            Console.Write("Input set 1 : ");
+            start = DateTime.Parse(Console.ReadLine());
+            Console.Write("Input set 2 : ");
+            end = DateTime.Parse(Console.ReadLine());
+
+            if (end < start)
+            {
+                Console.WriteLine("Invalid");
+            }
+            else
+            {
+                TimeSpan difference = end - start;
+                Console.WriteLine("Difference in time : " + difference.Hours + ":" + difference.Minutes + ":" + difference.Seconds);
+            }
+
+
+
+        }
+    }
+}
