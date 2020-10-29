@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string input;
+            int iteration;
+
+            Console.Write("Input file name : ");
+            input = Console.ReadLine();
+            Console.Write("Input iteration for file name");
+            iteration = Convert.ToInt32(Console.ReadLine());
+
+            for(int i = 0; i < iteration; i++)
+            {
+                Console.WriteLine(input + ".ver" + i);
+
+            }
+
+        }
+    }
+}
