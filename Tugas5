@@ -1,0 +1,31 @@
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, number, sum;
+            float average;
+            sum = 0;
+            i = 0;
+            Console.WriteLine("Enter the input that computes average (type 'q' to ends the number");
+            string input = Console.ReadLine();
+            while (input[0] != 'q')
+            {
+                number = int.Parse(input);
+                sum = sum + number;
+                i += 1;
+
+                input = Console.ReadLine();
+            }
+
+            average = sum / i;
+            Console.WriteLine("Product of all the number : " + i);
+            Console.WriteLine("Average = " + average);
+
+
+        }
+    }
+}
