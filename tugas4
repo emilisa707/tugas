@@ -6,7 +6,8 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            int i, number, factorial;
+            int i, number;
+            double factorial;
             factorial = 1;
             Console.Write("Input the number : ");
             number = Convert.ToInt32(Console.ReadLine());
