@@ -1,0 +1,19 @@
+using System;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i, number, factorial;
+            factorial = 1;
+            Console.Write("Input the number : ");
+            number = Convert.ToInt32(Console.ReadLine());
+            for (i = 1; i <= number; i++)
+                factorial = factorial * i;
+            Console.WriteLine("The factorial of {0} is : {1} ", number, factorial);
+
+        }
+    }
+}
