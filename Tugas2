@@ -1,0 +1,45 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c, d;
+            double root1, root2;
+
+            Console.WriteLine("Enter a, b and c where a*x*x + b*x + c = ");
+            Console.Write("a = ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("b = ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.Write("c = ");
+            c = Convert.ToInt32(Console.ReadLine());
+
+            if (a == 0)
+            {
+                Console.WriteLine("Invalid");
+            }
+
+            d = (b * b) - (4 * a * c);
+            double sqrt_val = Math.Sqrt(d);
+
+            if (d < 0)
+            {
+                Console.WriteLine("First root = " + -(double)b / (2 * a) + " + i" + Math.Sqrt(-d)/(2*a));
+                Console.WriteLine("Second root = " + -(double)b / (2 * a) + " - i" + Math.Sqrt(-d) / (2 * a));
+
+            }
+            else
+            {
+                root1 = (double)(-b + sqrt_val) / (2 * a);
+                root2 = (double)(-b - sqrt_val) / (2 * a);
+
+                Console.WriteLine("First root = " + root1);
+                Console.WriteLine("Second root = " + root2);
+            }
+
+        }
+    }
+}
