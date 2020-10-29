@@ -1,0 +1,115 @@
+using System;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            const float PI = 3.14159f;
+            int user_choice;
+
+            Console.WriteLine("Choose");
+            Console.WriteLine("1. Calculate the Area of a Cricle");
+            Console.WriteLine("2. Calculate the Area of a Rectangle");
+            Console.WriteLine("3. Calculate the Area of a Triangle");
+            Console.WriteLine("4. Quit");
+            Console.Write("Enter you choice (1-4) : ");
+            user_choice = Convert.ToInt32(Console.ReadLine());
+
+            switch(user_choice)
+            {
+                case 1:
+                    int radius;
+                    float area;
+                    Console.Write("What is the radius ? : ");
+                    radius = Convert.ToInt32(Console.ReadLine());
+
+                    if(radius < 0)
+                    {
+                        Console.WriteLine("we're sorry. the radius must be");
+                        Console.WriteLine("a positive number. \n");
+                        Console.WriteLine("rerun the program and try again");
+                    }
+                    else
+                    {
+                        area = PI * radius * radius;
+                        Console.WriteLine("The area of the circle is " + area);
+
+                    }
+                    break;
+
+                case 2:
+                    float width, length;
+                    Console.Write("What is the Length? : ");
+                    length = Convert.ToInt32(Console.ReadLine());
+
+                    if (length > 0)
+                    {
+                        Console.Write("what is the width? : ");
+                        width = float.Parse(Console.ReadLine());
+                        if(width > 0)
+                        {
+                            area = length * width;
+                            Console.WriteLine("The area of rectangle is " + area);
+                        }
+                        else
+                        {
+                            Console.WriteLine("We're sorry. Width must be greater than 0.");
+                            Console.WriteLine("Rerun the program and try again.");
+                        }
+
+                    }
+                    else
+                    {
+                        Console.WriteLine("We're sorry. Length must be greater that 0.");
+                        Console.WriteLine("Rerun the program and try again.");
+                    }
+                    break;
+
+                case 3:
+                    float basee, height;
+                    Console.Write("What is base base? : ");
+                    basee = float.Parse(Console.ReadLine());
+                    if(basee > 0)
+                    {
+                        Console.Write("what is the height? : " );
+                        height = float.Parse(Console.ReadLine());
+                        if(height > 0)
+                        {
+                            area = (basee * height) * 0.5f;
+                            Console.WriteLine(" area of triangle is : " + area);
+                        }
+                        else
+                        {
+                            Console.WriteLine("We're sorry. Height must");
+                            Console.WriteLine("be greater than 0.");
+                            Console.WriteLine("rerun the program and ");
+                            Console.WriteLine("try again.");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("We're sorry. Base length must");
+                        Console.WriteLine("be greater than 0.");
+                        Console.WriteLine("rerun the program and ");
+                        Console.WriteLine("try again.");
+                    }
+                    break;
+
+                case 4:
+                    Console.WriteLine("Good-by");
+                    break;
+
+                default:
+                    Console.WriteLine("We're sorry. your choice must");
+                    Console.WriteLine("between 1 and 4");
+                    Console.WriteLine("rerun the program and try again");
+                    break;
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
